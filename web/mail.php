@@ -12,14 +12,19 @@ if (!$db) {
     echo "Database connection error."
     exit;
 }
-$name .= $_REQUEST['Name'];
-$email .= $_REQUEST['Email'];
+
+$name = $_REQUEST['Name'];
+$email = $_REQUEST['Email'];
 
 $result = pg_query($db, 'INSERT INTO subscribers VALUES ("{$name}", "{$email}");';
 
+$location = "index.php";
+
 if ($result){
-  $location = "index.php";
   header( "Location: $location" );
+}
+else{
+header( "Location: $location" );
 }
 # LIST EMAIL ADDRESS
 // $recipient = "eaglecitynepal@gmail.com";
