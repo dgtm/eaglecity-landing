@@ -9,14 +9,14 @@ function pg_connection_string() {
 # Establish db connection
 $db = pg_connect(pg_connection_string());
 if (!$db) {
-    echo "Database connection error."
+    echo "Database connection error.";
     exit;
 }
 
 $name = $_REQUEST['Name'];
 $email = $_REQUEST['Email'];
 
-$result = pg_query($db, 'INSERT INTO subscribers VALUES ("{$name}", "{$email}");';
+$result = pg_query($db, "INSERT INTO subscribers VALUES ($name, $email);";
 
 $location = "index.php";
 
