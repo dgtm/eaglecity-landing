@@ -2,14 +2,33 @@
 
 ## CONFIG ##
 
+function pg_connection_string() {
+  return "dbname=d33ctd618elu1m host=ec2-54-225-156-230.compute-1.amazonaws.com port=5432 user=rrjgtkgpzrdpwq password=xkXWwifU7VsWxSpknFubQDpqNy sslmode=require";
+}
+
+# Establish db connection
+$db = pg_connect(pg_connection_string());
+if (!$db) {
+    echo "Database connection error."
+    exit;
+}
+$name .= $_REQUEST['Name'];
+$email .= $_REQUEST['Email'];
+
+$result = pg_query($db, "INSERT INTO subscribers (name, email)
+    VALUES ({$name}, {$email})";
+
+if ($result){
+  $location = "index.php";
+  header( "Location: $location" );
+}
 # LIST EMAIL ADDRESS
-$recipient = "eaglecitynepal@gmail.com";
+// $recipient = "eaglecitynepal@gmail.com";
 
 # SUBJECT (Subscribe/Remove)
-$subject = "Subscribe";
+// $subject = "Subscribe";
 
 # RESULT PAGE
-$location = "index.html";
 
 ## FORM VALUES ##
 
@@ -19,15 +38,13 @@ $location = "index.html";
 $sender = $recipient;
 
 # MAIL BODY
-$body .= "Name: ".$_REQUEST['Name']." \n";
-$body .= "Email: ".$_REQUEST['Email']." \n";
+
 # add more fields here if required
 
 ## SEND MESSGAE ##
 
-mail( $recipient, $subject, $body, "From: $sender" ) or die ("Mail could not be sent.");
+// mail( $recipient, $subject, $body, "From: $sender" ) or die ("Mail could not be sent.");
 
 ## SHOW RESULT PAGE ##
 
-header( "Location: $location" );
 ?>
