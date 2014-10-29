@@ -138,7 +138,7 @@
 
 <ul class="contact">
 	<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
-	<li class="active"><a href="http://www.facebook.com/eaglecity" class="fa fa-facebook"><span>Facebook</span></a></li>
+	<li class="active"><a href="https://www.facebook.com/pages/EagleCity/1586441058243713" class="fa fa-facebook"><span>Facebook</span></a></li>
 </ul>
 						<div class="byline">Subscribe to our mailing list and get an invite when we launch</div>
 						<br>
