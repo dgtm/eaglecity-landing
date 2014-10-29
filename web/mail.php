@@ -16,7 +16,7 @@ if (!$db) {
 $name = $_REQUEST['Name'];
 $email = $_REQUEST['Email'];
 
-$result = pg_query($db, "INSERT INTO subscribers VALUES ($name, $email);");
+$result = pg_query($db, "INSERT INTO subscribers VALUES ('$name', '$email');");
 
 $location = "index.php";
 
