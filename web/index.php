@@ -70,7 +70,7 @@
 					<section class="4u">
 						<span class="pennant"><span class="fa fa-group"></span></span>
 						<h3>EagleCity for your Business</h3>
-						<p>Looking for a reliable GPS service to manage your own fleet of vehicles. We provide consulting for your business and help manage your infrastructure</p>
+						<p>Our API provides a platform to build smarter road applications. We provide consulting to help you build your custom solutions on top of our API.</p>
 						<a disabled=true class="button button-style1">Get in touch with us</a>
 					</section>
 
